@@ -1,4 +1,4 @@
-
+#global_alpha_numeric = {}
 
 def num_words(text):
     words= text.split()
@@ -17,4 +17,21 @@ def character_num_times(text):
             alpha_numeric[letter] = 1
     #print(alpha_numeric)
 
+    #global_alpha_numeric= alpha_numeric
+
     return alpha_numeric
+
+
+
+def sort_on(items):
+    return items["num"]
+
+
+def sorted_list(unsorted_character):
+    alpha_numeric_list = [{"char": char, "num": num} for char, num in unsorted_character.items()]
+    alpha_numeric_list.sort(reverse=True, key=sort_on)
+    return alpha_numeric_list
+
+    
+    #return item["num"]
+
